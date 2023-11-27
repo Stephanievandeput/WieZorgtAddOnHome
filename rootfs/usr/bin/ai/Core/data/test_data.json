@@ -1,0 +1,174 @@
+[
+  {
+    "date": "2023-05-16T09:39:24.312392+00:00",
+    "user_location": "not_home",
+    "user_activity": "eating",
+    "scenario": {
+      "meal_type": "breakfast",
+      "activated": true,
+      "start_time": "2023-05-16T09:38:54.206456+00:00",
+      "reacted": true,
+      "finished": true,
+      "reaction_time": 18.549066,
+      "current_stage": {
+        "number": 1,
+        "start_time": "2023-05-16T09:38:54.215367+00:00",
+        "reaction_time": 18.540155
+      },
+      "stages": [
+        {
+          "stimuli": [
+            {
+              "id": "lamp_1",
+              "module": "wz_st_light",
+              "device_id": "kitchen_light",
+              "parameters": {
+                "brightness": 10
+              }
+            },
+            {
+              "id": "audio_1",
+              "module": "wz_st_illi_video",
+              "device_id": "woonkamer",
+              "parameters": {
+                "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Plaatjesvideo-met-stem-en-muziek-3.mp4",
+                "play_times": 2
+              }
+            }
+          ],
+          "stimuli_combination": [
+            "music",
+            "main light in kitchen"
+          ]
+        },
+        {
+          "stimuli": [
+            {
+              "id": "lamp_2",
+              "module": "wz_st_light",
+              "device_id": "kitchen_light",
+              "parameters": {
+                "brightness": 20
+              }
+            },
+            {
+              "id": "video_1",
+              "module": "wz_st_illi_video",
+              "device_id": "woonkamer",
+              "parameters": {
+                "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Ontbijt-met-stem-en-muziek-3.mp4",
+                "play_times": 3
+              }
+            }
+          ],
+          "stimuli_combination": [
+            "image",
+            "main light in kitchen"
+          ]
+        },
+        {
+          "stimuli": [
+            {
+              "id": "lamp_3",
+              "module": "wz_st_light",
+              "device_id": "kitchen_light",
+              "parameters": {
+                "brightness": 30
+              }
+            }
+          ],
+          "stimuli_combination": [
+            "voice",
+            "main light in kitchen"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "date": "2023-05-16T09:53:33.902308+00:00",
+    "user_location": "not_home",
+    "user_activity": "eating",
+    "scenario": {
+      "meal_type": "breakfast",
+      "activated": true,
+      "start_time": "2023-05-16T09:53:20.509389+00:00",
+      "reacted": true,
+      "finished": true,
+      "reaction_time": 13.253368,
+      "current_stage": {
+        "number": 2,
+        "start_time": "2023-05-16T09:53:33.869826+00:00",
+        "reaction_time": 13.238896
+      },
+      "stages": [
+        {
+          "stimuli": [
+            {
+              "id": "lamp_1",
+              "module": "wz_st_light",
+              "device_id": "kitchen_light",
+              "parameters": {
+                "brightness": 10
+              }
+            },
+            {
+              "id": "audio_1",
+              "module": "wz_st_illi_video",
+              "device_id": "woonkamer",
+              "parameters": {
+                "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Plaatjesvideo-met-stem-en-muziek-3.mp4",
+                "play_times": 2
+              }
+            }
+          ],
+          "stimuli_combination": [
+            "music",
+            "main light in kitchen"
+          ]
+        },
+        {
+          "stimuli": [
+            {
+              "id": "lamp_2",
+              "module": "wz_st_light",
+              "device_id": "kitchen_light",
+              "parameters": {
+                "brightness": 20
+              }
+            },
+            {
+              "id": "video_1",
+              "module": "wz_st_illi_video",
+              "device_id": "woonkamer",
+              "parameters": {
+                "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Ontbijt-met-stem-en-muziek-3.mp4",
+                "play_times": 3
+              }
+            }
+          ],
+          "stimuli_combination": [
+            "image",
+            "main light in kitchen"
+          ]
+        },
+        {
+          "stimuli": [
+            {
+              "id": "lamp_3",
+              "module": "wz_st_light",
+              "device_id": "kitchen_light",
+              "parameters": {
+                "brightness": 30
+              }
+            }
+          ],
+          "stimuli_combination": [
+            "voice",
+            "main light in kitchen"
+          ]
+        }
+      ]
+    }
+  }
+]

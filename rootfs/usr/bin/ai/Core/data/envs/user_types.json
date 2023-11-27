@@ -1,0 +1,70 @@
+{
+    "user_type_A": {
+        "breakfast": 2,
+        "lunch": 1,
+        "dinner": 0
+    },
+    
+    "user_type_B": {
+        "breakfast": 2,
+        "lunch": 2,
+        "dinner": 3
+    },
+    
+    "user_type_C": {
+        "breakfast": 1,
+        "lunch": 1,
+        "dinner": 1
+    },
+    
+    "user_type_D": {
+        "breakfast": 0,
+        "lunch": 0,
+        "dinner": 0
+    },
+    "user_type_E": {
+        "breakfast": "low",
+        "lunch": "low",
+        "dinner": "high"
+    },
+    "user_type_F": {
+        "breakfast": "low",
+        "lunch": "low",
+        "dinner": "low"
+    },
+    "user_type_G": {
+        "breakfast": "high",
+        "lunch": "high",
+        "dinner": "high"
+    },
+    "user_type_H": {
+        "breakfast": "low",
+        "lunch": "low",
+        "dinner": "low"
+    },
+    "user_type_H_2": {
+        "breakfast": "high",
+        "lunch": "high",
+        "dinner": "high"
+    },
+    "user_type_I": {
+        "breakfast": "low",
+        "lunch": "low",
+        "dinner": "low"
+    },
+    "user_type_I_2": {
+        "breakfast": "low",
+        "lunch": "low",
+        "dinner": "low"
+    },
+    "user_type_J": {
+        "breakfast": "low",
+        "lunch": "low",
+        "dinner": "low"
+    },
+    "user_type_J_2": {
+        "breakfast": "unk",
+        "lunch": "unk",
+        "dinner": "unk"
+    }
+}

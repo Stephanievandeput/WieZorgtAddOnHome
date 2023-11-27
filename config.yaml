@@ -1,0 +1,25 @@
+---
+name: "WieZorgtAI"
+description: "WieZorgt AI module"
+version: "1.0.2"
+slug: "wiezorgt_ai"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+homeassistant_api: true
+options:
+  backup:
+    host: "backup.wie-zorgt.nl"
+    username: ""
+    userpass: ""
+    repopass: ""
+schema:
+  backup:
+    host: str
+    username: str
+    userpass: str
+    repopass: str

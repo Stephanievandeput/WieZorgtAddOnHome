@@ -1,0 +1,8 @@
+{
+  "backup": {
+    "host": "backup.wie-zorgt.nl",
+    "username": "",
+    "userpass": "",
+    "repopass": ""
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "id": "scenario_dinner_1",
+    "stages": [
+        {
+            "id": "dinner_stage_1",
+            "duration": 30,
+            "stimuli_combination": [],
+            "stimuli_scripts": []
+        },
+        {
+            "id": "dinner_stage_2",
+            "duration": 30,
+            "stimuli_combination": [],
+            "stimuli_scripts": []
+        },
+        {
+            "id": "dinner_stage_3",
+            "duration": 30,
+            "stimuli_combination": [],
+            "stimuli_scripts": []
+        }
+    ]
+}

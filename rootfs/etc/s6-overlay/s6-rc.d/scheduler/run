@@ -1,0 +1,10 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# WieZorgt scheduler service
+# ==============================================================================
+bashio::log.info "Starting scheduler service"
+
+cd /usr/bin/ai
+# Run daemon
+exec python3 scheduler.py
