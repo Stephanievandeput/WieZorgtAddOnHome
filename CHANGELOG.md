@@ -1,4 +1,6 @@
 # Changelog
+## 1.0.3
+- Add mapping for empathic home
 
 ## 1.0.2
 
