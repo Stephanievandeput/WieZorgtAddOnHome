@@ -3,7 +3,6 @@ import datetime
 import time
 import json
 import numpy as np
-import pprint as pp
 
 from tensorboardX import SummaryWriter
 

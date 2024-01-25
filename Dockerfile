@@ -24,7 +24,9 @@ RUN \
     && pip3 install --no-cache-dir numpy \
     && pip3 install --no-cache-dir pandas \
     && pip3 install --no-cache-dir matplotlib \
-    && pip3 install --no-cache-dir tensorflow
+    && pip3 install --no-cache-dir tensorflow \
+    && pip3 install --no-cache-dir tabulate \
+    && pip3 install --no-cache-dir tensorboardX
 
 # Copy all data in the root folder
 WORKDIR /
