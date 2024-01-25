@@ -27,7 +27,8 @@ RUN \
     && pip3 install --no-cache-dir tensorflow \
     && pip3 install --no-cache-dir tabulate \
     && pip3 install --no-cache-dir tensorboardX \
-    && pip3 install --no-cache-dir gym
+    && pip3 install --no-cache-dir gym \
+    && pip3 install --no-cache-dir plotly
 
 # Copy all data in the root folder
 WORKDIR /
