@@ -180,8 +180,8 @@ class AiTraining:
             os.makedirs(self.results_data_path, exist_ok=True)
             
             helpers.write_json(
-                f"{self.results_data_path}/{now}_AI_HA_scenarios", self.ha_output # for testing
-                # f"{self.results_data_path}/AI_HA_scenarios", self.ha_output # original
+                # f"{self.results_data_path}/{now}_AI_HA_scenarios", self.ha_output # for testing
+                f"{self.results_data_path}/AI_HA_scenarios", self.ha_output  # original
             )
 
 
