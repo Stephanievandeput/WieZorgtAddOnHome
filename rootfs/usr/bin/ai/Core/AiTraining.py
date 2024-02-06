@@ -24,11 +24,11 @@ class AiTraining:
         # initializing directories
         # TODO check or redifine "persistent_data_path"
         self.persistent_data_path = persistent_data_path
-        self.cache_data_path = f"{self.persistent_data_path}_cache/"
-        # self.results_data_path = f"{self.cache_data_path}_results/"
-        self.models_data_path = f"{self.cache_data_path}_models/"
-        self.training_data_path = f"{self.cache_data_path}_training_data/"
-        self.figures_data_path = f"{self.persistent_data_path}_figures/"
+        self.cache_data_path = f"{self.persistent_data_path}cache/"
+        # self.results_data_path = f"{self.cache_data_path}results/"
+        self.models_data_path = f"{self.cache_data_path}models/"
+        self.training_data_path = f"{self.cache_data_path}training_data/"
+        self.figures_data_path = f"{self.persistent_data_path}figures/"
 
         self.results_data_path = "Core/data/envs/cache/results/"
         self.static_data_path = "Core/data/envs/"
@@ -187,7 +187,7 @@ class AiTraining:
 
 if __name__ == "__main__":
     persistent_data_path = (
-        "/Users/wendywtchang/GitHub/WieZorgtAI/wiezorgt/rootfs/usr/bin/ai/data"
+        "WieZorgt/rootfs/usr/bin/ai/data"
     )
     AiTraining = AiTraining(persistent_data_path)
     AiTraining.run_training()
