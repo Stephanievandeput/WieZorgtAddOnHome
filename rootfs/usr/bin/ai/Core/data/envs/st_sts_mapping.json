@@ -3,7 +3,7 @@
     "main_light_in_kitchen": {
         "id": "lamp_1",
         "module": "wz_st_light",
-        "device_id": "input_number.kitchen_cue_01: '1'",
+        "device_id": "light.lamp_naast_bank",
         "parameters": {
             "brightness": 100
         }
@@ -11,111 +11,87 @@
     "light_bulb": {
         "id": "lamp_2",
         "module": "wz_st_light",
-        "device_id": "input_number.dining_room_cue_01: '1'",
+        "device_id": "light.lamp_naast_bank",
+        "parameters": {
+            "brightness": 100
+        }
+    }
+  },
+  "breakfast": {
+    "light": {
+        "id": "lamp_1",
+        "module": "wz_st_light",
+        "device_id": "light.lamp_naast_bank",
         "parameters": {
             "brightness": 100
         }
     },
-    "smell": {
-        "id": "scent_1",
-        "module": "wz_st_switch",
-        "device_id": "input_number.kitchen_cue_03: '1'",
-        "parameters": { }
-    }
-  },
-  "breakfast": {
-    "smell": {
-        "id": "smell_1",
-        "module": "wz_st_smell",
-        "device_id": "input_number.kitchen_cue_03: '1'",
-        "parameters": {
-        }
-    },
-    "music": {
-        "id": "music_1",
-        "module": "wz_st_illi_video",
-        "device_id": "input_number.dining_room_cue_02: '1'",
-        "parameters": {
-            "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Ontbijt-met-stem-en-muziek-3.mp4",
-            "play_times": 2
-        }
-    },
-    "light": {
+    "main_light_in_kitchen": {
         "id": "lamp_1",
         "module": "wz_st_light",
-        "device_id": "input_number.dining_room_cue_01: '1'",
+        "device_id": "light.lamp_naast_bank",
+        "parameters": {
+            "brightness": 100
+        }
+    },
+    "light_bulb": {
+        "id": "lamp_2",
+        "module": "wz_st_light",
+        "device_id": "light.lamp_naast_bank",
         "parameters": {
             "brightness": 100
         }
     }
   },
   "lunch": {
-    "smell": {
-        "id": "smell_2",
-        "module": "wz_st_smell",
-        "device_id": "input_number.kitchen_cue_03: '1'",
-        "parameters": {
-        }
-    },
-    "music": {
-        "id": "music_2",
-        "module": "wz_st_illi_video",
-        "device_id": "input_number.dining_room_cue_02: '1'",
-        "parameters": {
-            "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Lunch-met-stem-en-muziek-3.mp4",
-            "play_times": 2
-        }
-    },
     "light": {
         "id": "lamp_2",
         "module": "wz_st_light",
-        "device_id": "input_number.kitchen_cue_01: '1'",
+        "device_id": "light.lamp_naast_bank",
         "parameters": {
             "brightness": 100
         }
     },
-    "voice": {
-        "id": "voice_2",
-        "module": "wz_st_illi_video",
-        "device_id": "input_number.dining_room_cue_02: '1'",
+    "main_light_in_kitchen": {
+        "id": "lamp_1",
+        "module": "wz_st_light",
+        "device_id": "light.lamp_naast_bank",
         "parameters": {
-            "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Lunch-met-stem-en-muziek-3.mp4",
-            "play_times": 2
+            "brightness": 100
+        }
+    },
+    "light_bulb": {
+        "id": "lamp_2",
+        "module": "wz_st_light",
+        "device_id": "light.lamp_naast_bank",
+        "parameters": {
+            "brightness": 100
         }
     }
   },
   "dinner": {
-    "smell": {
-        "id": "smell_3",
-        "module": "wz_st_smell",
-        "device_id": "input_number.kitchen_cue_03: '1'",
-        "parameters": {
-        }
-    },
-    "music": {
-        "id": "music_3",
-        "module": "wz_st_illi_video",
-        "device_id": "input_number.dining_room_cue_02: '1'",
-        "parameters": {
-            "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Diner-met-stem-en-muziek-3.mp4",
-            "play_times": 2
-        }
-    },
     "light": {
-        "id": "lamp_3",
+        "id": "lamp_2",
         "module": "wz_st_light",
-        "device_id": "input_number.kitchen_cue_01: '1'",
+        "device_id": "light.lamp_naast_bank",
         "parameters": {
             "brightness": 100
         }
     },
-    "voice": {
-        "id": "voice_3",
-        "module": "wz_st_illi_video",
-        "device_id": "input_number.dining_room_cue_02: '1'",
+    "main_light_in_kitchen": {
+        "id": "lamp_1",
+        "module": "wz_st_light",
+        "device_id": "light.lamp_naast_bank",
         "parameters": {
-            "files": "/home/pi/data/07-Zorghuis/12-Project-Wie-Zorgt/Diner-met-stem-en-muziek-3.mp4",
-            "play_times": 2
+            "brightness": 100
+        }
+    },
+    "light_bulb": {
+        "id": "lamp_2",
+        "module": "wz_st_light",
+        "device_id": "light.lamp_naast_bank",
+        "parameters": {
+            "brightness": 100
         }
     }
   }

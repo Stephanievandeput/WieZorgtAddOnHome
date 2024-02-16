@@ -1,7 +1,7 @@
 ---
 name: "WieZorgtAI"
 description: "WieZorgt AI module"
-version: "1.0.9"
+version: "1.0.10"
 slug: "wiezorgt_ai"
 init: false
 arch:

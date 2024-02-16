@@ -12,7 +12,7 @@ Experiment purpose: We want to know if the algorithm can adapt to different user
 """
 
 def generate_preferences(user_type):
-    signals = ["music", "smell", "light", "image", "voice", "video"]
+    signals = ["light"]
     no_preference = ["UNK"]
     
     user_preferences = {

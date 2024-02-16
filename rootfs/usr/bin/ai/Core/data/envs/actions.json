@@ -1,42 +1,42 @@
 [
     [
-        "smell",
         "light",
-        "video"
-    ],
-    [
-        "smell",
         "light",
-        "voice"
+        "light"
     ],
     [
-        "smell",
-        "image",
-        "video"
-    ],
-    [
-        "smell",
-        "image",
-        "voice"
-    ],
-    [
-        "music",
         "light",
-        "video"
-    ],
-    [
-        "music",
         "light",
-        "voice"
+        "light"
     ],
     [
-        "music",
-        "image",
-        "video"
+        "light",
+        "light",
+        "light"
     ],
     [
-        "music",
-        "image",
-        "voice"
+       "light",
+        "light",
+        "light"
+    ],
+    [
+         "light",
+        "light",
+        "light"
+    ],
+    [
+         "light",
+        "light",
+        "light"
+    ],
+    [
+       "light",
+        "light",
+        "light"
+    ],
+    [
+        "light",
+        "light",
+        "light"
     ]
 ]
