@@ -3,19 +3,19 @@
     "stages": [
         {
             "id": "dinner_stage_1",
-            "duration": 30,
+            "duration": 6000,
             "stimuli_combination": [],
             "stimuli_scripts": []
         },
         {
             "id": "dinner_stage_2",
-            "duration": 30,
+            "duration": 6000,
             "stimuli_combination": [],
             "stimuli_scripts": []
         },
         {
             "id": "dinner_stage_3",
-            "duration": 30,
+            "duration": 6000,
             "stimuli_combination": [],
             "stimuli_scripts": []
         }
