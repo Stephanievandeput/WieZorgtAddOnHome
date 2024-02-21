@@ -1,3 +1,4 @@
+import logging
 import os
 import datetime
 import time
@@ -25,12 +26,10 @@ class AiTraining:
         # TODO check or redifine "persistent_data_path"
         self.persistent_data_path = persistent_data_path
         self.cache_data_path = f"{self.persistent_data_path}cache/"
-        # self.results_data_path = f"{self.cache_data_path}results/"
+        self.results_data_path = f"{self.cache_data_path}results/"
         self.models_data_path = f"{self.cache_data_path}models/"
         self.training_data_path = f"{self.cache_data_path}training_data/"
         self.figures_data_path = f"{self.persistent_data_path}figures/"
-
-        self.results_data_path = "Core/data/envs/cache/results/"
         self.static_data_path = "Core/data/envs/"
 
         # Define contexts and action combinations
@@ -170,6 +169,7 @@ class AiTraining:
 
         # create output for all contexts and write output to cache path for home assistant to run
         now = datetime.datetime.now()
+        logging.warning("AI training: ik ben bij de meal loop " + " Het result data path hier is: " + self.results_data_path)
         for meal in self.contexts:
             self.ha_output[meal] = helpers.write_stimuli_combination(
                 self.ha_output_templates[meal],

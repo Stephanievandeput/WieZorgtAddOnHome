@@ -66,6 +66,7 @@ def check_scenario_attributes():
     _HAMTN = HomeAssistantMaintenance(http, _datapath, ha_url(), ha_bearer())
     for i in range(3):
         if _HAMTN.is_api_running():
+            logging.warning("Api is running - called in check_scenario_attributes")
             if not _HAMTN.has_breakfast_entity():
                 logging.warning("No breakfast scenario entity found, reloading scenario data.")
                 update_scenario_attributes()
@@ -98,23 +99,25 @@ def run_AI():
 
     :return:
     """
+    logging.warning("Starting run_AI process")
+
     _HAMTN = HomeAssistantMaintenance(http, _datapath, ha_url(), ha_bearer())
     logging.info("Starting run AI task")
     # HomeAssistant training data retrieval
     for i in range(64): # keep trying for 5 hours
         if _HAMTN.is_api_running():
-            logging.info("Retrieving yesterday's data from home assistant")
+            logging.warning("Retrieving yesterday's data from home assistant")
             HATD = HomeAssistantTrainingData(http, ha_url(), ha_bearer())
             result = HATD.retrieve_yesterday(compact=True)
             # Run AI with this data
-            logging.info("Running AI module on the retrieved data")
+            logging.warning("Running AI module on the retrieved data")
             AITM = AiTraining(_datapath)
             AITM.load_dataset(result)
             AITM.store_dataset()
             AITM.run_training()
             _HAMTN.store_cache(date.today() - timedelta(days = 1))
             update_scenario_attributes()
-            logging.info("Task complete")
+            logging.warning("Task complete")
             return
         time.sleep(5)
     logging.warning("HA API not running resulting in failure of running AI task.")
@@ -134,6 +137,7 @@ def make_backup():
 # create scheduler
 schedule = SafeScheduler()
 schedule.every().day.at("00:10").do(run_AI) # 0:10 AM every day we run the AI module
+#schedule.every(10).minutes.do(run_AI) # 0:10 AM every day we run the AI module
 schedule.every().day.at("06:00").do(make_backup) # 2 AM every day we backup all of the data
 schedule.every().minute.do(check_scenario_attributes)
 

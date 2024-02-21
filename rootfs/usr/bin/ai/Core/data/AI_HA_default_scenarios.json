@@ -16,7 +16,7 @@
                         "module": "wz_st_light",
                         "device_id": "light.lamp_naast_bank",
                         "parameters": {
-                            "brightness": 10
+                            "brightness": 50
                         }
                     },
                     {

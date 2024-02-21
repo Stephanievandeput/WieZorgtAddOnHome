@@ -15,9 +15,12 @@ class HomeAssistantMaintenance:
         self.http = http
         self.url = url
         self.bearer = bearer
+        logging.warning("Bearer: " + bearer)
         self.persistent_data_path = persistent_data_path
+        logging.warning("Persistent data path: " + persistent_data_path)
         self.cache_data_path = f"{self.persistent_data_path}cache/"
         self.results_data_path = f"{self.cache_data_path}results/"
+        logging.warning("Result data path: " + self.results_data_path)
         self.models_data_path = f"{self.cache_data_path}models/"
         self.training_data_path = f"{self.cache_data_path}training_data/"
         self.history_data_path = f"{self.persistent_data_path}history/"
@@ -35,7 +38,9 @@ class HomeAssistantMaintenance:
         :return:
         """
         if not os.path.exists(path):
+            logging.warning("Path van fix_path/mkdirs: " + path)
             os.makedirs(path)
+            logging.warning("Done with fix_path")
 
     def fix_base_structure(self):
         """
@@ -43,6 +48,7 @@ class HomeAssistantMaintenance:
 
         :return:
         """
+        logging.warning(os.listdir("/"))
         self.fix_path(self.persistent_data_path)
         self.fix_path(self.cache_data_path)
         self.fix_path(self.results_data_path)
@@ -50,6 +56,7 @@ class HomeAssistantMaintenance:
         self.fix_path(self.training_data_path)
         self.fix_path(self.history_data_path)
         self.fix_path(self.figures_data_path)
+        logging.warning(os.listdir("/"))
         if not os.path.exists(f"{self.results_data_path}AI_HA_scenarios.json"):
             logging.warning("Scenario's entity objects do not exist yet, creating.")
             with open(f"{self.static_data_path}AI_HA_default_scenarios.json", "r") as inpf, open(f"{self.results_data_path}AI_HA_scenarios.json", "w") as outpf:
@@ -92,6 +99,7 @@ class HomeAssistantMaintenance:
 
         :return:
         """
+        logging.warning(self.url)
         resp = self.http.request(
             "GET",
             f"{self.url}/",
@@ -100,7 +108,7 @@ class HomeAssistantMaintenance:
                 "content-type": "application/json"
             }
         )
-
+        logging.warning("Response: " + str(resp.status) + " data: " + str(resp.data))
         if resp.status == 200:
             return True
         else:

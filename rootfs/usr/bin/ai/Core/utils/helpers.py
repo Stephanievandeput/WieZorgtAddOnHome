@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import numpy as np
 import plotly.graph_objects as go
@@ -32,7 +33,9 @@ def write_json(file_name, data):
     :param data:
     :return:
     """
+    logging.warning("Writing the ai training data to " + file_name)
     with open(f"{file_name}.json", "w") as file:
+        logging.warning("Ik ben nu in the with open van write_json")
         json.dump(data, file, indent=4)
 
 
