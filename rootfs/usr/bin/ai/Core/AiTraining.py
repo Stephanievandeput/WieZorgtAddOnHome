@@ -169,7 +169,7 @@ class AiTraining:
 
         # create output for all contexts and write output to cache path for home assistant to run
         now = datetime.datetime.now()
-        logging.warning("AI training: ik ben bij de meal loop " + " Het result data path hier is: " + self.results_data_path)
+        #logging.warning("AI training: ik ben bij de meal loop " + " Het result data path hier is: " + self.results_data_path)
         for meal in self.contexts:
             self.ha_output[meal] = helpers.write_stimuli_combination(
                 self.ha_output_templates[meal],

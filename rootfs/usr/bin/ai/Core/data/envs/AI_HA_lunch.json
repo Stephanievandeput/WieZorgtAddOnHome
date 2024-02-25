@@ -3,19 +3,19 @@
     "stages": [
         {
             "id": "lunch_stage_1",
-            "duration": 6000,
+            "duration": 600,
             "stimuli_combination": [],
             "stimuli_scripts": []
         },
         {
             "id": "lunch_stage_2",
-            "duration": 6000,
+            "duration": 600,
             "stimuli_combination": [],
             "stimuli_scripts": []
         },
         {
             "id": "lunch_stage_3",
-            "duration": 6000,
+            "duration": 600,
             "stimuli_combination": [],
             "stimuli_scripts": []
         }

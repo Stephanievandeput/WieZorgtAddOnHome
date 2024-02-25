@@ -351,7 +351,7 @@ binary_sensor:
         above: 0
         # user has opened the cabinet door in the previous 20 minutes for more than 2 times
       - platform: "numeric_state"
-        entity_id: "sensor.cabinet_door_opened"
+        entity_id: "binary_sensor.cabinet_door_opened"
         prob_given_true: 0.80
         prob_given_false: 0.20
         above: 2
