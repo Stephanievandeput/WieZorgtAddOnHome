@@ -138,7 +138,7 @@ def make_backup():
 schedule = SafeScheduler()
 schedule.every().day.at("00:10").do(run_AI) # 0:10 AM every day we run the AI module
 #schedule.every(10).minutes.do(run_AI) # 0:10 AM every day we run the AI module
-schedule.every().day.at("06:00").do(make_backup) # 2 AM every day we backup all of the data
+schedule.every().day.at("16:30").do(make_backup) # 2 AM every day we backup all of the data
 schedule.every().minute.do(check_scenario_attributes)
 
 # run scenario updater and backup flow upon start
