@@ -3,7 +3,7 @@
     "main_light_in_kitchen": {
         "id": "lamp_1",
         "module": "wz_st_light",
-        "device_id": "light.lamp_naast_bank",
+        "device_id": "light.lamp_gang",
         "parameters": {
             "brightness": 100
         }
@@ -29,17 +29,17 @@
     "main_light_in_kitchen": {
         "id": "lamp_1",
         "module": "wz_st_light",
-        "device_id": "light.lamp_naast_bank",
+        "device_id": "light.lamp_gang",
         "parameters": {
             "brightness": 100
         }
     },
-    "light_bulb": {
-        "id": "lamp_2",
-        "module": "wz_st_light",
-        "device_id": "light.lamp_naast_bank",
+    "music": {
+        "id": "music_1",
+        "module": "wz_st_sound",
+        "device_id": "woonkamer",
         "parameters": {
-            "brightness": 100
+            "play_times": 2
         }
     }
   },
@@ -55,17 +55,17 @@
     "main_light_in_kitchen": {
         "id": "lamp_1",
         "module": "wz_st_light",
-        "device_id": "light.lamp_naast_bank",
+        "device_id": "light.lamp_gang",
         "parameters": {
             "brightness": 100
         }
     },
-    "light_bulb": {
-        "id": "lamp_2",
-        "module": "wz_st_light",
-        "device_id": "light.lamp_naast_bank",
+    "voice": {
+        "id": "voice_1",
+        "module": "wz_st_sound",
+        "device_id": "woonkamer",
         "parameters": {
-            "brightness": 100
+            "play_times": 2
         }
     }
   },
@@ -78,18 +78,18 @@
             "brightness": 100
         }
     },
-    "main_light_in_kitchen": {
-        "id": "lamp_1",
-        "module": "wz_st_light",
-        "device_id": "light.lamp_naast_bank",
+    "voice": {
+        "id": "voice_1",
+        "module": "wz_st_sound",
+        "device_id": "woonkamer",
         "parameters": {
-            "brightness": 100
+            "play_times": 2
         }
     },
     "light_bulb": {
         "id": "lamp_2",
         "module": "wz_st_light",
-        "device_id": "light.lamp_naast_bank",
+        "device_id": "light.lamp_gang",
         "parameters": {
             "brightness": 100
         }

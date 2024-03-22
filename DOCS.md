@@ -202,6 +202,22 @@ Use the left top folder button to navigate to config / scripts.yaml and add the 
         data:
             target: "{{device_id}}"
             message: '{ "command": "stopVideo" }'
+
+  wz_st_sound:
+    alias: "Wie Zorgt sound module"
+    sequence:
+      - service: "tts.google_translate_say"
+        data:
+            target: "media_player.{{device_id}}"
+            message: "Hallo, dit is het Wie Zorgt systeem dat je eraan herinnert dat het tijd is om te gaan eten"
+
+  wz_st_sound_end:
+    alias: "Wie Zorgt sound module end"
+    sequence:
+      - service: "tts.google_translate_say"
+        data:
+            target: "media_player.{{device_id}}"
+            message: '{ "command": "stop" }'
 ```
 
 ### automations.yaml
