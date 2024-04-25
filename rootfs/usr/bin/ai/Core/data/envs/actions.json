@@ -1,42 +1,42 @@
 [
     [
         "light",
+        "music",
+        "light-bulb"
+    ],
+    [
+        "main_light_in_kitchen",
         "light",
-        "light"
+        "voice"
     ],
     [
         "light",
-        "light",
-        "light"
-    ],
-    [
-        "light",
-        "light",
-        "light"
+        "main_light_in_kitchen",
+        "music"
     ],
     [
        "light",
-        "light",
+        "music",
         "light"
     ],
     [
          "light",
-        "light",
+        "voice",
         "light"
     ],
     [
          "light",
-        "light",
+        "voice",
         "light"
     ],
     [
        "light",
-        "light",
+        "music",
         "light"
     ],
     [
         "light",
         "light",
-        "light"
+        "voice"
     ]
 ]
