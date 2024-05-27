@@ -32,7 +32,12 @@ def main():
     AIT = AiTraining(_datapath)
     f = open("Core/data/test_data.json")
     data = json.load(f)
-    print(data)
+
+    print("="*20)
+    print(f"Loading data from : {f} (Interface HA to AI)")
+    # print(data)
+    print("="*20)
+
     AIT.load_dataset(data)
     AIT.store_dataset()
     AIT.run_training()

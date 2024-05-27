@@ -96,11 +96,15 @@ class AiTraining:
                 n_actions=env.action_space.n, n_contexts=len(env.contexts)
             )
             agent.load_params(saved_model_path)
+            print("="*20)
+            print(f"Loading latest trained model from: {saved_model_path}")
         else:
             # Create a new agent
             agent = ContextualThompsonSamplingAgent(
                 n_actions=env.action_space.n, n_contexts=len(env.contexts)
             )
+            print("=" * 20)
+            print(f"Creating new agent model.")
 
         # Training configs (Working on: real-time update)
         n_trials = config.n_trials
@@ -154,6 +158,8 @@ class AiTraining:
         print(f"End of Training {agent_name}")
 
         # Save model
+        now = datetime.datetime.now()
+        agent.save_params(file_path=f"./models/{now}/{agent_name}.pkl")  # model
         agent.save_params(file_path=f"./models/{agent_name}.pkl")
 
         # Save rewards
@@ -183,7 +189,9 @@ class AiTraining:
                 # f"{self.results_data_path}/{now}_AI_HA_scenarios", self.ha_output # for testing
                 f"{self.results_data_path}/AI_HA_scenarios", self.ha_output  # original
             )
-
+        print("="*20)
+        print(f"Save scenario script tomorrow at {self.results_data_path}/{now}_AI_HA_scenarios (Interface AI to HA)")
+        print("="*20)
 
 if __name__ == "__main__":
     persistent_data_path = (
