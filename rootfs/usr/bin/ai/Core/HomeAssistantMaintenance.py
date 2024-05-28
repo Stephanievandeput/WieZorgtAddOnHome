@@ -29,6 +29,7 @@ class HomeAssistantMaintenance:
         self.figures_data_path = f"{self.persistent_data_path}figures/"
         self.logbook_data_path = f"{self.persistent_data_path}logbook/"
         self.static_data_path = "Core/data/"
+        self.homeassistant_path = "/homeassistant"
         self.config = {}
         self.fix_base_structure()
         self.read_conf()
@@ -223,5 +224,5 @@ class HomeAssistantMaintenance:
             # creating repo (will only create one if no one exists, error outputs will be ignored)
             subprocess.call(f"restic --password-file='{self.persistent_data_path}repo_passwd' --repo='rest:https://{self.config['backup']['username']}:{self.config['backup']['userpass']}@{self.config['backup']['host']}/{self.config['backup']['username']}/addon_data' init --repository-version 2", shell=True, stderr=dev_null)
             # Run backup script
-            subprocess.call(f"restic --password-file='{self.persistent_data_path}repo_passwd' --repo='rest:https://{self.config['backup']['username']}:{self.config['backup']['userpass']}@{self.config['backup']['host']}/{self.config['backup']['username']}/addon_data' backup '{self.persistent_data_path}' --compression auto", shell=True)
+            subprocess.call(f"restic --password-file='{self.persistent_data_path}repo_passwd' --repo='rest:https://{self.config['backup']['username']}:{self.config['backup']['userpass']}@{self.config['backup']['host']}/{self.config['backup']['username']}/addon_data' backup '{self.persistent_data_path}' '{self.homeassistant_path}' --compression auto", shell=True)
 
