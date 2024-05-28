@@ -3,6 +3,8 @@ import os
 import subprocess
 import logging
 import shutil
+from datetime import date, datetime, timedelta
+from .utils.helpers import *
 
 
 class HomeAssistantMaintenance:
@@ -25,6 +27,7 @@ class HomeAssistantMaintenance:
         self.training_data_path = f"{self.cache_data_path}training_data/"
         self.history_data_path = f"{self.persistent_data_path}history/"
         self.figures_data_path = f"{self.persistent_data_path}figures/"
+        self.logbook_data_path = f"{self.persistent_data_path}logbook/"
         self.static_data_path = "Core/data/"
         self.config = {}
         self.fix_base_structure()
@@ -56,6 +59,7 @@ class HomeAssistantMaintenance:
         self.fix_path(self.training_data_path)
         self.fix_path(self.history_data_path)
         self.fix_path(self.figures_data_path)
+        self.fix_path(self.logbook_data_path)
         logging.warning(os.listdir("/"))
         if not os.path.exists(f"{self.results_data_path}AI_HA_scenarios.json"):
             logging.warning("Scenario's entity objects do not exist yet, creating.")
@@ -170,6 +174,40 @@ class HomeAssistantMaintenance:
         """
         shutil.make_archive(f"{self.history_data_path}{date}", 'zip', self.cache_data_path)
 
+    def get_logbook(self):
+        """
+        Get logbook from supervisor
+
+        :return:
+        """
+        start_time = (date.today() - timedelta( days=7 )).isoformat()
+        end_time = datetime.now().isoformat()
+
+        resp = self.http.request(
+            "GET",
+            f"{self.url}/logbook/{start_time}?end_time={end_time}",
+            headers={
+                "Authorization": "Bearer {}".format(self.bearer),
+                "content-type": "application/json"
+            }
+        )
+
+        if resp.status == 200:
+            return resp.json()
+        else:
+            return ""
+
+    def save_logbook(self):
+        """
+        Dump logbook to file 
+
+        :return:
+        """
+
+        logbook = self.get_logbook()
+        today = date.today().isoformat()
+
+        write_json( f"{self.logbook_data_path}/logbook-{today}", logbook )
 
 
     def make_backup(self):

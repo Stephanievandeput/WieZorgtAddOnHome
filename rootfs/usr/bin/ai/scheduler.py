@@ -130,6 +130,8 @@ def make_backup():
     :return:
     """
     _HAMTN = HomeAssistantMaintenance(http, _datapath, ha_url(), ha_bearer())
+    logging.info("Saving logbook")
+    _HAMTN.save_logbook()
     logging.info("Creating backup")
     _HAMTN.make_backup()
     logging.info("Done creating backup")
