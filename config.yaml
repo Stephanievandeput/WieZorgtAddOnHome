@@ -1,7 +1,7 @@
 ---
 name: "WieZorgtAI"
 description: "WieZorgt AI module"
-version: "1.0.20"
+version: "1.0.21"
 slug: "wiezorgt_ai"
 init: false
 arch:
@@ -11,6 +11,8 @@ arch:
   - armv7
   - i386
 homeassistant_api: true
+map: 
+  - "homeassistant_config" 
 options:
   backup:
     host: "backup.wie-zorgt.nl"
